@@ -26,7 +26,7 @@ def transform_text_to_sequences(dataframe, column_name):
         # Tokenize the post
         tokens = word_tokenize(post)
         # Remove stopwords and non-alphabetic words
-        filtered_tokens = [word for word in tokens if word.isalpha() and word not in stop_words]
+        filtered_tokens = [word.lower() for word in tokens if word.isalpha() and word not in stop_words]
         sequences.append(filtered_tokens)
 
     return sequences
