@@ -28,7 +28,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
 # Load dataset
-data = pd.read_csv("/content/reddit_movies.csv")
+data = pd.read_csv("/content/reddit_movies20k.csv", sep = '~')
 data.columns = ['posts']
 
 # Basic text preprocessing
