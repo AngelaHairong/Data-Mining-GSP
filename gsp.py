@@ -155,6 +155,8 @@ def print_common_itemsets(frequent_items, sequences):
     # Print item sets with their counts
     for item_set, count in sorted_item_counts:
         print(f"Item Set: {set(item_set)}, Count: {count}")
+        
+    print(f"Total number of patterns found: {len(frequent_items)}")    
 
 # Example usage of the algorithm
 min_support = 3
