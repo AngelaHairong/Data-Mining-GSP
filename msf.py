@@ -8,15 +8,6 @@ Original file is located at
 """
 
 pip install scikit-learn
-
-transactions = [
-                ['Bread', 'Milk'],
-                ['Bread', 'Diaper', 'Beer', 'Eggs'],
-                ['Milk', 'Diaper', 'Beer', 'Coke'],
-                ['Bread', 'Milk', 'Diaper', 'Beer'],
-                ['Bread', 'Milk', 'Diaper', 'Coke']
-            ]
-
 pip install memory_profiler
 
 import pandas as pd
@@ -32,7 +23,7 @@ from nltk.stem import WordNetLemmatizer
 
 
 # Load dataset
-data = pd.read_csv("/content/reddit_movies.csv")
+data = pd.read_csv("/content/reddit_movies20k.csv", sep = '~')
 data.columns = ['posts']
 
 # Basic text preprocessing
