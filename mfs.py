@@ -153,16 +153,19 @@ def print_common_itemsets(frequent_items, sequences):
 
     # Sort item sets by their counts
     sorted_item_counts = sorted(item_counts.items(), key=lambda x: x[1], reverse=True)
+   
 
     # Print item sets with their counts
     for item_set, count in sorted_item_counts:
         print(f"Item Set: {set(item_set)}, Count: {count}")
+    
+    print(f"Total number of patterns found: {len(frequent_items)}")    
 
 
 # Example usage of the algorithm
-min_support = 3
-max_gap = 8
-max_length = 4 # For short rules
+min_support = 2
+max_gap = 2
+max_length = 3 #For short rules
 frequent_items = measure_gsp_efficiency(raw_transactions, min_support, max_gap, max_length)
 
 # Convert frequent items to format suitable for visualization
